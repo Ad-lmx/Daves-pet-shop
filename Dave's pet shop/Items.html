@@ -1,0 +1,79 @@
+<!--This is a trial website for the pet shop-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave's Pet Shop</title>
+    <link rel="icon" type="image/x-icon" href="dog.png">
+
+<style>
+    h1{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 45px;
+    }
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+    overflow: hidden;
+    background-color: rgb(9, 53, 53);
+}
+li{
+    display: inline;
+    float: right;
+}
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    background-color: rgb(55, 255, 255);
+}
+li a:hover{
+    background-color: azure;
+}
+.active{
+    background-color: azure;
+}
+
+/*pet links*/
+.circle{
+    list-style-type: none ;
+    float: left;
+    display: inline;    
+}
+.dog,.cat,.fish,.bird{
+    display: inline;
+    color: black;
+    text-align: center;
+    background-color: white;
+    padding: 8px;
+    margin: 5px;
+}
+</style>
+</head>
+<body>
+    <h1>Dave's Pet Shop</h1>
+
+    <section>
+        <div id="navi">
+        <ul>
+            <li><a href="Contacts.html">Contacts</a></li> 
+            <li><a class="active" href="Items.html">Items</a></li>
+            <li><a href="dave's_html.html">Home</a></li> 
+        </ul>
+        </div>
+    </section>
+
+    <div class="circle">
+            <h2><a class="dog">DOG</a></h2>
+            <h2><a class="cat">CAT</a></h2>
+            <h2><a class="fish">FISH</a></h2>
+            <h2><a class="bird">BIRD</a></h2>
+    </div>
+</body>
+</html>

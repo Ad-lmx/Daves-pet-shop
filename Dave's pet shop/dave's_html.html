@@ -1,0 +1,321 @@
+<!--This is a trial website for the pet shop-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dave's Pet Shop</title>
+    <link rel="icon" type="image/x-icon" href="favi.jpg">
+
+<style>
+    body{
+        background-image: url('paw_prints_trail_across_screen.jpg');
+    }
+    .logo{
+            width: 50%;
+            height: 50%;
+            margin-left: 25%;
+        }
+    h1{
+        text-align: center;
+        margin-top: 20px;
+        font-size: 45px;
+        text-decoration: none;
+    }
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: azure;
+    overflow: hidden;
+    background-color: rgb(9, 53, 53);
+}
+li{
+    display: inline;
+    float: right;
+}
+li a{
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 8px;
+    text-decoration: none;
+    background-color: rgb(55, 255, 255);
+}
+li a:hover{
+    background-color: azure;
+}
+.active{
+    background-color: azure;
+}
+
+/*pet links*/
+.circle{
+    display: inline;    
+}
+.dog,.cat,.fish,.bird{
+    display: inline-block;
+    color: black;
+    text-align: center;
+    background-color: white;
+    padding: 10px;
+    margin: 29px;
+    border-radius: 50%;
+}
+h2{
+    display: inline;
+    float: none;
+    text-align: center;
+    box-shadow: none;
+}
+.pet-image{
+    display: block;
+    width: 170px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 0px;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.pet-cards {
+    display: inline-block;
+    color: black;
+    text-align: center;
+    background-color: white;
+    padding: 0px;
+    margin: 29px;
+    border-radius: 50%;
+    transition: transform 0.03s ease;
+}
+
+.pet-cards:hover {
+    transform: scale(1.05);
+}
+
+.search-form {
+            display: flex;
+            align-items: center; 
+            max-width: 400px;
+            margin: 0 auto; 
+        }
+
+        .search-input {
+            flex: 1; 
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-button {
+            background-color: rgb(55, 255, 255);
+            color: black;
+            padding: 5px 9px;
+            border: none;
+            border-radius: 90px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .search-container {
+            margin-top: 20px;
+        }
+        .image-container{
+            display: flex;
+            overflow: hidden;
+            height: 390px;
+            width: 500px;
+            left: 0;
+            right: 0;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+    } 
+    .button{
+        display: flex;
+        position: absolute;
+        height: 30px;
+        width: 30px;
+        }
+        .content-section{
+            display: flex;
+            align-items: right;
+        }
+        .image-container{
+            flex: 1;
+            margin-right: 20px;
+            width: 50%;
+            height: 600px;
+        }
+        .text1{
+            flex: 2;
+            padding: 20px;
+        }
+</style>
+
+<div class="logo">
+    <a href="dave's_html.html">
+        <img class="logo" src="logo.jpg" alt="logo">
+    </a>
+    </div>
+
+<section>
+    <div id="navi">
+    <ul>
+        <li><a href="Contacts.html">Contacts</a></li> 
+        <li><a href="Items.html">About</a></li>
+        <li><a class="active" href="dave's_html.html">Home</a></li>
+    </ul>
+    </div>    
+    <div class="search-container">
+        <form class="search-form" action="/search" method="get">
+            <input class="search-input" type="text" name="search" placeholder="Search...">
+            <button class="search-button" type="submit"><img src="icons8-search-24.png"></button>
+        </form>
+    </div>
+</section>
+</head>
+<body>
+<p>
+    <div class="circle">
+        <div class="dog">
+        <div class="pet-cards dog">
+            <a href="dog.html" class="pet-image-link">
+            <img class="pet-image" src="dog.jpg" alt="Dog">
+        </a>
+        <h2><a class="dog">DOG</a></h2>
+        </div>
+        </div>
+
+        <div class="cat">
+            <div class="pet-cards cat">
+            <a href="cat.html" class="pet-image-link">
+            <img class="pet-image" src="cat.jpg" alt="Cat">
+            </a>
+        <h2><a class="cat">CAT</a></h2>
+        </div>
+        </div>
+
+        <div class="fish">
+            <div class="pet-cards fish">
+            <a href="fish.html" class="pet-image-link">
+            <img class="pet-image" src="fish.jpg" alt="Fish">
+            </a>
+        <h2><a class="fish">FISH</a></h2>
+        </div>
+    </div>
+
+        <div class="bird">
+            <a href="bird.html" class="pet-image-link">
+                <div class="pet-cards bird">
+                    <img class="pet-image" src="bird.jpg" alt="Bird">
+                </a>
+                <h2><a class="bird">BIRD</a></h2>
+            </div>
+        </div>
+</div>
+</p>
+<section class="content-section">
+    <div class="image-container">
+        <img class="slide" src="food2.jpg" width="600px" height="305px">
+        <img class="slide" src="food1.jpg" width="600px" height="305px">
+        <img class="slide" src="catfood.jpg" width="600px" height="305px">
+        <img class="slide" src="ball.jpg" width="600px" height="350px">
+        <img class="slide" src="dog mouth.png" width="600px" height="350px">
+        <img class="slide" src="rubberbone.jpg" width="600px" height="390px">
+        <img class="slide" src="cfood.jpg" width="600px" height="390px">
+    </div>
+
+        <div class="button">
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)" style="color:black; border: none; border-radius: 50%; background-color:aqua;">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)" style="color:black; border: none; border-radius: 50%; background-color:aqua;">&#10095;</button>
+        </div>
+    </section>
+        <script>
+            let slideIndex = 1;
+          
+            function plusDivs(n) {
+              showSlides(slideIndex += n);
+            }
+          
+            function showSlides(n) {
+              let slides = document.getElementsByClassName("slide");
+              if (n > slides.length) {
+                slideIndex = 1;
+              }
+              if (n < 1) {
+                slideIndex = slides.length;
+              }
+              for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              slides[slideIndex - 1].style.display = "block";
+            }
+          
+            showSlides(slideIndex);
+          </script>
+
+    <div class="text-container">
+        <div class="text1"
+            <p>
+                <h2><u>Does your pet have anxiety?</u></h2>
+        
+                <p>Pet anxiety is most common in dogs, but even small mammals like hamsters and rabbits can be troubled at times.
+                    Anxiety in animals results in abnormal and sometimes destructive behavior, all of which can be disruptive to the entire family. 
+                    If your pet demonstrates anxiety, you can take the following steps to help him or her overcome it. 
+                    These steps might not cure the condition entirely, but they can quell it at the very least.</p>
+    
+        <h4><b>Determine the Cause of the Anxiety</b></h4>
+        Your pet's anxiety stems from something specific. It can be an incident, an object, or a combination of both. 
+        Whether it's your vacuum or crossing the street that gives your pet the Heebie-Jeebies, identifying the specific source will help you target the anxiety.
+        <h4><b>Use Positive Association</b></h4>
+        If your pet quivers at the prospect of getting into your car, for instance, you can try to pattern her to reduce the fear. 
+        Attempt a short exercise during which you put your pet in the fearful situation, then immediately reward him with a treat for dealing with it. 
+        This promotes positive association; it gives your pet the opportunity to pair the troubling activity with something he looks forward to, 
+        thus helping him erase that trigger of fear. Be careful not to overdo this exercise though, as you don't want it to have the opposite effect.
+        <h4><b>Use Distractions</b></h4>
+         Simple distractions from an anxiety trigger can be very effective. 
+         Distractions work best with temporary triggers that cannot be controlled, such as thunder or fireworks.
+        Instead of enduring another episode of your beloved furrball hiding under your bed while the thunder rolls,
+         encourage her to fetch a favorite toy. Give her a rare treat or even just a lavish belly rub. Before long, 
+         she will phase out the booms of doom and both of you will be grateful.
+        <h4><b>Training Can Help</b></h4>
+        If you've ever left your pet at home to run an errand and came back to utter chaos at the paws of your pup, you are all too familiar with the classic case of pet anxiety. 
+        Your furry family member just can't bare being home without you, so he eats your favorite pair of shoes or rips the morning paper to nasty, wet shreds. 
+        You cannot become a hermit, and you can't tote your pup to work either, so the next best solution is behavioral training.
+        Experts like Cesar Millan train the anxiety out of dogs on a regular basis, and they swear by it.
+         Though watching a few episodes of "The Dog Whisperer" might give you an idea of what you can expect,
+          your best bet is to find a local trainer for you and your pal. Training might involve patterning, but it consists of a lot more than that. 
+          As soon as you and your pet learn the tools most effective for combating his or her individual anxiety, 
+          you can harness them to create a more enjoyable future.
+        Pet anxiety is an obstacle neither human nor animal should endure. 
+        Let's face it - your heart breaks for your pets misery even as you're mourning those chewed-up shoes.
+         Make your pet more comfortable by following the preliminary steps above. If all else fails, consulting your vet is your next best move. 
+        </p>
+            <p>
+            <h2><u>Keeping your pet cool in the summer</u></h2>
+                
+                <h4><b>Pre-hot weather grooming</b></h4>
+                Before the hot summer days arrive, 
+                you may want to consider grooming your pet. Thought your pet does have the natural defense of shedding as the heat approaches,
+                 it never hurts to help things along by giving a quick brushing to get out all the loose hair. This can be true particularly for dogs. 
+                 Also, if your dog has long hair, you might want to cut it down to an inch long or so. Be sure that you never cut down to your dog’s skin.
+                
+                <h4><b>Shade and water</b></h4>
+                If your pet is outside a lot, make sure that it has a shady place to rest, 
+                with a supply of clean water. On the hottest days, putting a few ice cubes in the dish can help a lot.
+                These are very simple but useful steps to help keep your pet cool.
+                
+                <h4><b>In the car</b></h4>
+                If it’s hot outside, you shouldn’t leave your pets unattended in your vehicle. 
+                Cars will heat up quickly in the sun and can far exceed the temperature outside. 
+                 Even leaving the car running with the air conditioning isn’t a guarantee; since it is possible the car can stop running.
+    </p>
+                 </div>
+
+</div>      
+</section>
+</body>
+</html>

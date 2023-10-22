@@ -1,0 +1,117 @@
+/* Hide radio buttons */
+input[type="radio"] {
+    display: none;
+}
+
+/* Style slider container */
+.image-slider {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Style the images within the slider */
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Adjust width for each image */
+.slider img {
+    width: 100%;
+    height: auto;
+}
+
+/* Set up the radio button navigation */
+input[type="radio"]:checked ~ .image-slider .slider {
+    transform: translateX(-0%);
+}
+
+input[type="radio"]:nth-of-type(2):checked ~ .image-slider .slider {
+    transform: translateX(-100%);
+}
+
+input[type="radio"]:nth-of-type(3):checked ~ .image-slider .slider {
+    transform: translateX(-200%);
+}
+
+/* Add similar rules for additional images */
+
+
+
+<section class="image-slider-container">
+    <input type="radio" name="slider" id="slide1" checked>
+    <input type="radio" name="slider" id="slide2">
+    <input type="radio" name="slider" id="slide3">
+    <!-- Add more input elements for additional images -->
+
+    <div class="image-slider">
+        <div class="slider">
+            <img src="food1.jpg" alt="Dog Food">
+            <img src="food2.jpg" alt="Cat Food">
+            <img src="ball.jpg" alt="Cat Toy">
+            <!-- Add more images -->
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+.button{
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        height: 30px;
+        width: 30px;
+        }
+
+               <div class="button">
+            <button class="w3-button w3-display-left" onclick="plusDivs(-1)" style="color:black; border: none; border-radius: 50%; background-color:aqua; width: 60px; height: 60px;">&#10094;</button>
+            <button class="w3-button w3-display-right" onclick="plusDivs(+1)" style="color:black; border: none; border-radius: 50%; background-color:aqua;">&#10095;</button>
+        </div>
+
+
+
+                image.src="food1.jpg";
+        image.src="catfood.jpg";
+    }
+                 function changeImage(image) {
+
+                    <section class="content-section">
+    <div class="image-container">
+        <img class="slide" src="food2.jpg" width="600px" height="305px">
+        <img class="slide" src="food1.jpg" width="600px" height="305px">
+        <img class="slide" src="catfood.jpg" width="600px" height="305px">
+        <!-- ... (other images) ... -->
+    </div>
+</section>
+
+<script>
+    let slideIndex = 0;
+    const slides = document.getElementsByClassName("slide");
+    
+    function showSlides() {
+        for (let i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideIndex].style.display = "block";
+    }
+    
+    function changeImage(n) {
+        slideIndex += n;
+        if (slideIndex >= slides.length) {
+            slideIndex = 0;
+        } else if (slideIndex < 0) {
+            slideIndex = slides.length - 1;
+        }
+        showSlides();
+    }
+    
+    showSlides();
+</script>
